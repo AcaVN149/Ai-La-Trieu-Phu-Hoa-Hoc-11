@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Cinzel:wght@700;900&family=Montserrat:wght@400;600;700;900&family=Poppins:wght@400;600;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Segoe UI', 'Arial Unicode MS', 'Times New Roman', 'Poppins', 'Montserrat', 'Cambria Math', 'Segoe UI Symbol', "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  @apply bg-[#0d0721] text-slate-50 min-h-screen overflow-x-hidden;
+  font-family: var(--font-sans);
+  background-color: #0d0721;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(255, 215, 0, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255, 180, 0, 0.07) 0%, transparent 50%),
+    repeating-linear-gradient(45deg, rgba(255, 215, 0, 0.03) 0px, rgba(255, 215, 0, 0.03) 1px, transparent 1px, transparent 10px),
+    linear-gradient(135deg, #0d0721 0%, #1e1335 100%);
+  background-attachment: fixed;
+}
+
+/* Twinkling Stars Effect */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  background-image: 
+    radial-gradient(1px 1px at 10% 20%, white 100%, transparent),
+    radial-gradient(1px 1px at 30% 50%, white 100%, transparent),
+    radial-gradient(2px 2px at 50% 80%, white 100%, transparent),
+    radial-gradient(1px 1px at 70% 30%, white 100%, transparent),
+    radial-gradient(2px 2px at 90% 10%, white 100%, transparent),
+    radial-gradient(1px 1px at 25% 75%, white 100%, transparent),
+    radial-gradient(1px 1px at 60% 85%, white 100%, transparent),
+    radial-gradient(1px 1px at 85% 60%, white 100%, transparent);
+  background-size: 200% 200%;
+  animation: twinkling 15s infinite linear;
+  opacity: 0.3;
+}
+
+@keyframes twinkling {
+  0% { transform: scale(1); opacity: 0.2; }
+  50% { transform: scale(1.1); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 0.2; }
+}
+
+.glass-morphism {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.question-box {
+  background: #2A2440;
+  border: 2px solid #FFD700;
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.2);
+}
+
+.answer-btn {
+  background: #3A3155;
+  border: 1px solid #5A4A7A;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.answer-btn:hover:not(:disabled) {
+  background: #4E417A !important;
+  border-color: #FFD700 !important;
+}
+
+.answer-btn.selected {
+  background: #FFD700 !important;
+  color: #0B0815 !important;
+  border-color: #FFD700 !important;
+}
+
+.answer-btn.correct {
+  background: #22c55e !important;
+  border-color: #4ade80 !important;
+  color: white !important;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.6);
+}
+
+.answer-btn.wrong {
+  background: #ef4444 !important;
+  border-color: #f87171 !important;
+  color: white !important;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+}
+
+.glow-gold {
+  box-shadow: 0 0 15px #FFD700;
+}
+
+.prize-moc {
+  transition: all 0.3s ease;
+}
+
+.prize-moc.active {
+  background: #FFD700 !important;
+  color: #0B0815 !important;
+  box-shadow: 0 0 15px #FFD700 !important;
+  font-weight: 900 !important;
+  transform: scale(1.05);
+}
+
+.prize-moc.safe {
+  border-color: #FFD700 !important;
+}
+
+.prize-moc.passed {
+  color: rgba(255, 255, 255, 0.3) !important;
+  text-decoration: line-through;
+}
+
+.progress-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.progress-dot.active {
+  background: #FFD700;
+  box-shadow: 0 0 10px #FFD700;
+  transform: scale(1.2);
+}
+
+.lifeline-btn {
+  background: #1E3A5F;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
+}
+
+.lifeline-btn:hover:not(:disabled) {
+  background: #2A4E7A;
+  border-color: #FFD700;
+}
+
+.stop-btn {
+  background: #C53B3B;
+  transition: all 0.2s ease;
+}
+
+.stop-btn:hover {
+  background: #E54B4B;
+  transform: translateY(-2px);
+}
+
+.mc-silhouette {
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+.wise-man-content {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 24px;
+  line-height: 1.6;
+  font-size: 1.15rem;
+  text-align: justify;
+  background: rgba(30, 20, 50, 0.95);
+  border-radius: 12px;
+  border: 1px solid #FFD700;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.draggable-phone-modal {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  max-width: 400px;
+  background: #1a1625;
+  border: 2px solid #3b82f6;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-col: ;
+  flex-direction: column;
+}
+
+.phone-header {
+  cursor: grab;
+  user-select: none;
+}
+
+.phone-header:active {
+  cursor: grabbing;
+}
+
+.registration-modal {
+  background: rgba(11, 8, 21, 0.95);
+  backdrop-filter: blur(12px);
+  border: 2px solid #FFD700;
+}
+
+.form-input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #FFD700;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+  outline: none;
+}
+
+/* Hide scrollbars but allow scrolling */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+.explanation-box {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-top: 1.5rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
