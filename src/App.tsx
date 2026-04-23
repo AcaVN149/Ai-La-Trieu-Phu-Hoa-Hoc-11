@@ -17,9 +17,15 @@ import { Leaderboard } from "./components/Leaderboard";
 const quizService = QuizService.getInstance();
 
 export default function App() {
-  const [playerInfo, setPlayerInfo] = useState<{ name: string; grade: string } | null>(null);
+  const [playerInfo, setPlayerInfo] = useState<{ name: string; grade: string } | null>(() => {
+    const saved = localStorage.getItem("playerInfo");
+    return saved ? JSON.parse(saved) : null;
+  });
   const [regForm, setRegForm] = useState({ name: "", grade: "" });
-  const [status, setStatus] = useState<"registration" | "menu" | "history" | "leaderboard" | "loading" | "playing" | "end">("registration");
+  const [status, setStatus] = useState<"registration" | "menu" | "history" | "leaderboard" | "loading" | "playing" | "end">(() => {
+    return localStorage.getItem("playerInfo") ? "menu" : "registration";
+  });
+
   const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
   const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty | null>(null);
   
@@ -113,9 +119,17 @@ export default function App() {
   const handleRegister = (e: React.FormEvent) => {
     e.preventDefault();
     if (regForm.name.trim() && regForm.grade.trim()) {
-      setPlayerInfo({ name: regForm.name.trim(), grade: regForm.grade.trim() });
+      const info = { name: regForm.name.trim(), grade: regForm.grade.trim() };
+      setPlayerInfo(info);
+      localStorage.setItem("playerInfo", JSON.stringify(info));
       setStatus("menu");
     }
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("playerInfo");
+    setPlayerInfo(null);
+    setStatus("registration");
   };
 
   const startNewGame = async () => {
@@ -253,7 +267,15 @@ export default function App() {
 
         {status === "menu" && (
           <motion.div key="menu" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="flex-1 flex flex-col items-center justify-center space-y-12 py-12 max-w-4xl mx-auto w-full">
-            <div className="text-center space-y-4">
+            <div className="text-center space-y-4 relative w-full">
+              <div className="absolute top-0 right-0">
+                 <button 
+                  onClick={handleLogout}
+                  className="px-4 py-2 bg-red-600/10 hover:bg-red-600/20 text-red-400 text-[10px] font-black uppercase tracking-widest rounded-lg border border-red-500/20 transition-all flex items-center gap-2"
+                 >
+                   🚪 Đổi tên
+                 </button>
+              </div>
               <p className="text-blue-300 uppercase font-black text-xs tracking-widest">{playerInfo?.name} — {playerInfo?.grade}</p>
               <h1 className="text-5xl md:text-8xl font-black text-[#FFD700] italic tracking-tighter drop-shadow-2xl uppercase text-center">AI LÀ TRIỆU PHÚ</h1>
               <p className="text-white/60 font-medium italic text-center">Chọn lộ trình để bắt đầu cuộc hành trình chinh phục tri thức Hóa học</p>
@@ -539,7 +561,10 @@ export default function App() {
           </div>
       )}
       
-      <footer className="mt-8 text-center text-slate-700 text-[10px] font-black tracking-[0.5em] uppercase">AI LÀ TRIỆU PHÚ — CHEMISTRY 11</footer>
+      <footer className="mt-auto py-8 text-center space-y-2">
+        <p className="text-slate-700 text-[10px] font-black tracking-[0.5em] uppercase">AI LÀ TRIỆU PHÚ — CHEMISTRY 11</p>
+        <p className="text-white/60 text-[12px] font-medium">Người phát triển: Phạm Minh Hoàng và Nguyễn Trường Tân</p>
+      </footer>
     </div>
   );
 }

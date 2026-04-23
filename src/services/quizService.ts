@@ -6,6 +6,9 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { Question, Difficulty, Topic } from "../types";
 import { QUESTION_BANK } from "../data/questions";
+import { validateAndFixHydrocarbonQuestions } from "../utils/hydrocarbonValidator";
+import { validateAndFixDaiCuongQuestions } from "../utils/inorganicValidator";
+import { validateAndFixDanXuatQuestions } from "../utils/derivativeValidator";
 
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
@@ -50,7 +53,19 @@ export class QuizService {
   }
 
   public resetBank() {
-    this.questions = QUESTION_BANK.map((q, i) => ({
+    let baseQuestions = [...QUESTION_BANK];
+    
+    // Auto-fix formatting on initialization
+    const dcResult = validateAndFixDaiCuongQuestions(baseQuestions);
+    baseQuestions = dcResult.fixedQuestions;
+    
+    const hcResult = validateAndFixHydrocarbonQuestions(baseQuestions);
+    baseQuestions = hcResult.fixedQuestions;
+
+    const dvResult = validateAndFixDanXuatQuestions(baseQuestions);
+    baseQuestions = dvResult.fixedQuestions;
+
+    this.questions = baseQuestions.map((q, i) => ({
       ...q,
       id: `local-${i}`
     }));

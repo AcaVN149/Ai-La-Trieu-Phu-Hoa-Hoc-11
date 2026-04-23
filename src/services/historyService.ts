@@ -6,7 +6,7 @@
 import { GameRecord } from "../types";
 
 const HISTORY_KEY = "millionaire_history";
-const MAX_RECORDS = 500; // Increased for leaderboard coverage
+const MAX_RECORDS = 5000; // Large limit for "unlimited" feel
 
 export const historyService = {
   saveGameRecord: (record: GameRecord) => {

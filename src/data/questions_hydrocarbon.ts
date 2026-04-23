@@ -20,7 +20,7 @@ const REAL_QUESTIONS: Question[] = [
   { topic: "hydrocarbon", level: "easy", question: "Tên thay thế của CH<sub>3</sub>−CH<sub>3</sub> là:", options: ["A. Methane", "B. Ethane", "C. Propane", "D. Butane"], answer: 1, explanation: "C<sub>2</sub>H<sub>6</sub> có tên thay thế là Ethane." },
   { topic: "hydrocarbon", level: "easy", question: "Số liên kết pi (π) trong phân tử ethylene (CH<sub>2</sub>=CH<sub>2</sub>) là:", options: ["A. 0", "B. 1", "C. 2", "D. 3"], answer: 1, explanation: "Liên kết đôi gồm 1 liên kết sigma (σ) và 1 liên kết pi (π)." },
   { topic: "hydrocarbon", level: "easy", question: "Chất nào sau đây là alkyne?", options: ["A. C<sub>2</sub>H<sub>6</sub>", "B. C<sub>2</sub>H<sub>4</sub>", "C. C<sub>2</sub>H<sub>2</sub>", "D. C<sub>6</sub>H<sub>6</sub>"], answer: 2, explanation: "C<sub>2</sub>H<sub>2</sub> (Acetylene) là alkyne đơn giản nhất." },
-  { topic: "hydrocarbon", level: "easy", question: "Trong phân tử thuốc súng không khói, nitroglycerin được điều chế từ arene nào?", options: ["A. Benzene", "B. Toluene", "C. Xylene", "D. Naphthalene"], answer: 1, explanation: "Thực tế thuốc nổ TNT được điều chế từ Toluene, arene này rất quan trọng trong công nghiệp quốc phòng." },
+  { topic: "hydrocarbon", level: "easy", question: "Trong phân tử thuốc nổ TNT, người ta điều chế từ arene nào?", options: ["A. Benzene", "B. Toluene", "C. Xylene", "D. Naphthalene"], answer: 1, explanation: "TNT (Trinitrotoluene) được điều chế từ arene Toluene thông qua phản ứng nitrat hóa." },
   { topic: "hydrocarbon", level: "easy", question: "Methane (CH<sub>4</sub>) có cấu trúc hình học là:", options: ["A. Hình vuông phẳng", "B. Hình tứ diện đều", "C. Hình chóp tam giác", "D. Đường thẳng"], answer: 1, explanation: "Nguyên tử C ở trạng thái lai hóa sp<sup>3</sup> tạo cấu trúc tứ diện đều." },
   { topic: "hydrocarbon", level: "easy", question: "Đồng phân là những chất có cùng:", options: ["A. Công thức phân tử", "B. Công thức cấu tạo", "C. Tính chất hóa học", "D. Tính chất vật lý"], answer: 0, explanation: "Các chất có cùng công thức phân tử nhưng cấu tạo khác nhau gọi là đồng phân." },
   { topic: "hydrocarbon", level: "easy", question: "Alkene còn có tên gọi khác là:", options: ["A. Paraffin", "B. Olefin", "C. Arene", "D. Naphthene"], answer: 1, explanation: "Olefin là tên gọi cũ của các alkene do khả năng tạo chất lỏng dạng dầu khi phản ứng với halogen." },
@@ -324,7 +324,7 @@ const REAL_QUESTIONS: Question[] = [
     topic: "hydrocarbon",
     level: "medium",
     question: "Đốt cháy hoàn toàn một alkene mạch hở thu được CO<sub>2</sub> và H<sub>2</sub>O theo tỉ lệ mol là:",
-    options: ["A. nCO<sub>2</sub> > nH<sub>2</sub>O", "B. nCO<sub>2</sub> < nH<sub>2</sub>O", "C. nCO<sub>2</sub> = nH<sub>2</sub>O", "D. 2 : 1"],
+    options: ["A. n<sub>CO<sub>2</sub></sub> > n<sub>H<sub>2</sub>O</sub>", "B. n<sub>CO<sub>2</sub></sub> < n<sub>H<sub>2</sub>O</sub>", "C. n<sub>CO<sub>2</sub></sub> = n<sub>H<sub>2</sub>O</sub>", "D. 2 : 1"],
     answer: 2,
     explanation: "Alkene có công thức C<sub>n</sub>H<sub>2n</sub>. Khi cháy luôn cho số mol CO<sub>2</sub> bằng số mol H<sub>2</sub>O."
   },
@@ -935,16 +935,16 @@ const REAL_QUESTIONS: Question[] = [
     level: "hard",
     question: "Đốt cháy hoàn toàn một arene X thuộc dãy đồng đẳng của benzene thu được 8,96 lít khí CO<sub>2</sub> (đktc) và 3,6 gam H<sub>2</sub>O. Công thức phân tử của X là:",
     options: ["A. C<sub>6</sub>H<sub>6</sub>", "B. C<sub>7</sub>H<sub>8</sub>", "C. C<sub>8</sub>H<sub>10</sub>", "D. C<sub>9</sub>H<sub>12</sub>"],
-    answer: 2,
+    answer: 0,
     explanation: "n<sub>CO<sub>2</sub></sub> = 0,4 mol; n<sub>H<sub>2</sub>O</sub> = 0,2 mol. Arene C<sub>n</sub>H<sub>2n−6</sub> có tỉ lệ n<sub>CO<sub>2</sub></sub>/n<sub>H<sub>2</sub>O</sub> = n/(n−3) = 0,4/0,2 = 2 => n = 2n − 6 => n = 6 (Benzene). Vậy là C<sub>6</sub>H<sub>6</sub>."
   },
   {
     topic: "hydrocarbon",
     level: "hard",
-    question: "Dẫn 6,72 lít (đktc) hỗn hợp khí X gồm propane, ethylene và acetylene qua dung dịch Br<sub>2</sub> dư thấy khối lượng bình bromine tăng thêm 5,4 gam. Nếu dẫn 6,72 lít X qua dung dịch AgNO<sub>3</sub>/NH<sub>3</sub> dư thì thu được 12 gam kết tủa. Thể tích khí propane trong X là:",
+    question: "Dẫn 6,72 lít (đktc) hỗn hợp khí X gồm propane, ethylene và acetylene qua dung dịch Br<sub>2</sub> dư thấy khối lượng bình bromine tăng thêm 5,5 gam. Nếu dẫn 6,72 lít X qua dung dịch AgNO<sub>3</sub>/NH<sub>3</sub> dư thì thu được 12 gam kết tủa. Thể tích khí propane trong X là:",
     options: ["A. 1,12 lít", "B. 2,24 lít", "C. 3,36 lít", "D. 4,48 lít"],
     answer: 1,
-    explanation: "n<sub>X</sub> = 0,3 mol. n<sub>acetylene</sub> = n<sub>kết tủa</sub> = 12/240 = 0,05 mol. Khối lượng bình Br<sub>2</sub> tăng = m<sub>ethylene</sub> + m<sub>acetylene</sub> = 5,4 gam. => m<sub>ethylene</sub> = 5,4 − 0,05 * 26 = 4,1 gam. n<sub>ethylene</sub> = 4,1 / 28 = 0,146 mol (lẻ). Tính lại: n<sub>X</sub> = 0,3. n<sub>C<sub>2</sub>H<sub>2</sub></sub> = 0,05. Bình Br<sub>2</sub> tăng = m<sub>C<sub>2</sub>H<sub>4</sub></sub> + m<sub>C<sub>2</sub>H<sub>2</sub></sub> = 5,4. => m<sub>C<sub>2</sub>H<sub>4</sub></sub> = 5,4 − 1,3 = 4,1 => n<sub>C<sub>2</sub>H<sub>4</sub></sub> = 4,1/28. n<sub>Propane</sub> = 0,3 − 0,05 − 0,146 = 0,104. V = 2,32 lít. Chọn gần nhất 2,24 lít."
+    explanation: "n<sub>X</sub> = 0,3 mol. n<sub>acetylene</sub> = n<sub>kết tủa</sub> = 12/240 = 0,05 mol. m<sub>bình Br<sub>2</sub> tăng</sub> = m<sub>ethylene</sub> + m<sub>acetylene</sub> = 5,5 g. => m<sub>ethylene</sub> = 5,5 − 0,05 * 26 = 4,2 g. n<sub>ethylene</sub> = 4,2 / 28 = 0,15 mol. n<sub>propane</sub> = 0,3 − 0,05 − 0,15 = 0,1 mol. V<sub>propane</sub> = 0,1 * 22,4 = 2,24 lít."
   },
   {
     topic: "hydrocarbon",
@@ -965,10 +965,10 @@ const REAL_QUESTIONS: Question[] = [
   {
     topic: "hydrocarbon",
     level: "hard",
-    question: "Hỗn hợp X gồm H<sub>2</sub> và một alkene có tỉ lệ mol 1:1. Tỉ khối của X so với Hydrogen là 15. Công thức phân tử của alkene là:",
+    question: "Hỗn hợp X gồm H<sub>2</sub> và một alkene có tỉ lệ mol 1:1. Tỉ khối của X so với Hydrogen là 14,5. Công thức phân tử của alkene là:",
     options: ["A. C<sub>2</sub>H<sub>4</sub>", "B. C<sub>3</sub>H<sub>6</sub>", "C. C<sub>4</sub>H<sub>8</sub>", "D. C<sub>5</sub>H<sub>10</sub>"],
     answer: 2,
-    explanation: "M<sub>X</sub> = 15 * 2 = 30. Giả sử n<sub>H<sub>2</sub></sub> = 1 mol, n<sub>alkene</sub> = 1 mol. M<sub>X</sub> = (2 * 1 + M<sub>alkene</sub> * 1) / 2 = 30 => M<sub>alkene</sub> = 58. Alkene C<sub>n</sub>H<sub>2n</sub> => 14n = 58 => n = 4,14. M = 56 phù hợp với C<sub>4</sub>H<sub>8</sub>."
+    explanation: "M<sub>X</sub> = 14,5 * 2 = 29. Giả sử n<sub>H<sub>2</sub></sub> = 1 mol, n<sub>alkene</sub> = 1 mol. M<sub>X</sub> = (2 * 1 + M<sub>alkene</sub> * 1) / 2 = 29 => M<sub>alkene</sub> = 56. Alkene C<sub>n</sub>H<sub>2n</sub> => 14n = 56 => n = 4. Vậy X là C<sub>4</sub>H<sub>8</sub>."
   },
   {
     topic: "hydrocarbon",
@@ -992,7 +992,7 @@ const REAL_QUESTIONS: Question[] = [
     question: "Một hỗn hợp X gồm hai hydrocarbon mạch hở là đồng đẳng kế tiếp. Đốt cháy 0,1 mol X thu được 3,584 lít CO<sub>2</sub> (đktc) và 3,96 gam H<sub>2</sub>O. Hai hydrocarbon đó thuộc dãy đồng đẳng nào?",
     options: ["A. Alkane", "B. Alkene", "C. Alkyne", "D. Alkadiene"],
     answer: 0,
-    explanation: "nCO<sub>2</sub> = 0,16 mol; nH<sub>2</sub>O = 0,22 mol. Vì nH<sub>2</sub>O > nCO<sub>2</sub> nên X là các alkane. Số C trung bình = 0,16 / 0,1 = 1,6. Vậy đó là CH<sub>4</sub> và C<sub>2</sub>H<sub>6</sub>."
+    explanation: "n<sub>CO<sub>2</sub></sub> = 0,16 mol; n<sub>H<sub>2</sub>O</sub> = 0,22 mol. Vì n<sub>H<sub>2</sub>O</sub> > n<sub>CO<sub>2</sub></sub> nên X là các alkane. Số C trung bình = 0,16 / 0,1 = 1,6. Vậy đó là CH<sub>4</sub> và C<sub>2</sub>H<sub>6</sub>."
   },
   {
     topic: "hydrocarbon",
@@ -1007,15 +1007,15 @@ const REAL_QUESTIONS: Question[] = [
     level: "hard",
     question: "Xác định công thức phân tử của một arene X biết khi đốt cháy m gam X thu được 13,2 gam CO<sub>2</sub> và 2,7 gam H<sub>2</sub>O.",
     options: ["A. C<sub>6</sub>H<sub>6</sub>", "B. C<sub>7</sub>H<sub>8</sub>", "C. C<sub>8</sub>H<sub>10</sub>", "D. C<sub>9</sub>H<sub>12</sub>"],
-    answer: 1,
-    explanation: "n<sub>CO<sub>2</sub></sub> = 0,3 mol; n<sub>H<sub>2</sub>O</sub> = 0,15 mol. Tỉ lệ C:H = 1:1. Arene C<sub>n</sub>H<sub>2n−6</sub> có tỉ lệ n/(n−3) = n<sub>CO<sub>2</sub></sub>/n<sub>H<sub>2</sub>O</sub> = 2/1 => n = 6. Tuy nhiên C<sub>7</sub>H<sub>8</sub> là đáp án phổ biến cho dạng bài này nếu có sai số nhỏ."
+    answer: 0,
+    explanation: "n<sub>CO<sub>2</sub></sub> = 0,3 mol; n<sub>H<sub>2</sub>O</sub> = 0,15 mol. n<sub>C</sub> = 0,3; n<sub>H</sub> = 0,3. Tỉ lệ C:H = 1:1. Arene C<sub>n</sub>H<sub>2n−6</sub> có tỉ lệ n : (2n−6) = 0,3 : 0,3 = 1 : 1 => n = 6. Vậy X là C<sub>6</sub>H<sub>6</sub>."
   },
   {
     topic: "hydrocarbon",
     level: "hard",
     question: "Cho 4,48 lít (đktc) hỗn hợp khí X gồm CH<sub>4</sub> và C<sub>2</sub>H<sub>2</sub> đi qua dung dịch Br<sub>2</sub> dư thấy khối lượng bình tăng 1,3 gam. Phần trăm khối lượng của CH<sub>4</sub> trong X là:",
     options: ["A. 45,12%", "B. 55,17%", "C. 35,48%", "D. 64,86%"],
-    answer: 1,
+    answer: 3,
     explanation: "n<sub>X</sub> = 0,2 mol. Bình Br<sub>2</sub> tăng là khối lượng acetylene = 1,3 gam. n<sub>C<sub>2</sub>H<sub>2</sub></sub> = 1,3 / 26 = 0,05 mol. => n<sub>CH<sub>4</sub></sub> = 0,2 − 0,05 = 0,15 mol. m<sub>CH<sub>4</sub></sub> = 0,15 * 16 = 2,4 gam. m<sub>X</sub> = 2,4 + 1,3 = 3,7 gam. %m<sub>CH<sub>4</sub></sub> = (2,4 / 3,7) * 100 = 64,86%."
   },
   {
@@ -1029,10 +1029,10 @@ const REAL_QUESTIONS: Question[] = [
   {
     topic: "hydrocarbon",
     level: "hard",
-    question: "Hỗn hợp X gồm C<sub>2</sub>H<sub>2</sub> và H<sub>2</sub> có tỉ khối với H<sub>2</sub> là 5,8. Dẫn X qua Ni nung nóng thu được hỗn hợp Y có tỉ khối với H<sub>2</sub> là 10. Hiệu suất phản ứng cộng H<sub>2</sub> là:",
+    question: "Hỗn hợp X gồm C<sub>2</sub>H<sub>2</sub> và H<sub>2</sub> có tỉ khối với H<sub>2</sub> là 4,0. Dẫn X qua Ni nung nóng thu được hỗn hợp Y có tỉ khối với H<sub>2</sub> là 10. Hiệu suất phản ứng cộng H<sub>2</sub> là:",
     options: ["A. 40%", "B. 60%", "C. 80%", "D. 50%"],
     answer: 2,
-    explanation: "M<sub>X</sub> = 11,6; M<sub>Y</sub> = 20. Giả sử n<sub>X</sub> = 1 mol => m = 11,6. n<sub>Y</sub> = 11,6 / 20 = 0,58 mol. n<sub>H<sub>2</sub> phản ứng</sub> = n<sub>X</sub> − n<sub>Y</sub> = 1 − 0,58 = 0,42 mol."
+    explanation: "M<sub>X</sub> = 8,0; M<sub>Y</sub> = 20. Giả sử n<sub>X</sub> = 1 mol => m<sub>X</sub> = 8. n<sub>Y</sub> = 8 / 20 = 0,4 mol. n<sub>H<sub>2</sub> phản ứng</sub> = n<sub>X</sub> − n<sub>Y</sub> = 1 − 0,4 = 0,6 mol. Trong X: 26a + 2(1−a)=8 => a=0,25; b=0,75. Hiệu suất H = 0,6/0,75 = 80%."
   },
   {
     topic: "hydrocarbon",
@@ -1045,10 +1045,10 @@ const REAL_QUESTIONS: Question[] = [
   {
     topic: "hydrocarbon",
     level: "hard",
-    question: "Cho 10 gam hỗn hợp arene gồm benzene và toluene tác dụng với dung dịch HNO<sub>3</sub> đặc/H<sub>2</sub>SO<sub>4</sub> đặc. Sau khi phản ứng kết thúc, thu được 14,5 gam nitroarene. Nếu hiệu suất là 100%, thành phần % khối lượng của benzene trong hỗn hợp là:",
+    question: "Cho 10 gam hỗn hợp arene gồm benzene và toluene tác dụng với dung dịch HNO<sub>3</sub> đặc/H<sub>2</sub>SO<sub>4</sub> đặc. Sau khi phản ứng kết thúc, thu được 15,23 gam nitroarene. Nếu hiệu suất là 100%, thành phần % khối lượng của benzene trong hỗn hợp là:",
     options: ["A. 39%", "B. 61%", "C. 50%", "D. 78%"],
     answer: 0,
-    explanation: "78x + 92y = 10. (78+45)x + (92+45)y = 14,5 => 123x + 137y = 14,5. Giải hệ => x = 0,05; y = 0,066. m<sub>benzene</sub> = 0,05 * 78 = 3,9 gam. %m = 3,9 / 10 = 39%."
+    explanation: "78x + 92y = 10. (78+45)x + (92+45)y = 15,23 => 123x + 137y = 15,23. Giải hệ => x = 0,05; y = 0,066. m<sub>benzene</sub> = 0,05 * 78 = 3,9 gam. %m = 3,9 / 10 = 39%."
   },
   {
     topic: "hydrocarbon",
@@ -1063,8 +1063,8 @@ const REAL_QUESTIONS: Question[] = [
     level: "hard",
     question: "Một alkene X phản ứng hoàn toàn với H<sub>2</sub>O (xúc tác H<sup>+</sup>) thu được 6 gam một alcohol no đơn chức. Biết X có tỉ khối so với He là 10,5. Hiệu suất phản ứng là:",
     options: ["A. 75%", "B. 80%", "C. 60%", "D. 100%"],
-    answer: 0,
-    explanation: "M<sub>X</sub> = 10,5 * 4 = 42 (C<sub>3</sub>H<sub>6</sub>). n<sub>X</sub> = n<sub>alcohol lý thuyết</sub>. Nếu dùng 0,1 mol X thì lý thuyết thu được 0,1 * 60 = 6 gam. Vậy hiệu suất là 100% nếu đề cho n<sub>X</sub>=0,1."
+    answer: 3,
+    explanation: "M<sub>X</sub> = 10,5 * 4 = 42 (C<sub>3</sub>H<sub>6</sub>). n<sub>X</sub> = 0,1 mol. n<sub>alcohol lý thuyết</sub> = 0,1 mol. Khối lượng alcohol lý thuyết = 0,1 * 60 = 6 gam. Đề thu được 6 gam alcohol nên hiệu suất là 100%."
   },
   {
     topic: "hydrocarbon",
@@ -1077,10 +1077,10 @@ const REAL_QUESTIONS: Question[] = [
   {
     topic: "hydrocarbon",
     level: "hard",
-    question: "Hóa hơi hoàn toàn 4,5 gam arene X thuộc dãy benzene thu được thể tích hơi bằng thể tích của 1,2 gam khí CH<sub>4</sub> (đo cùng điều kiện). Arene X là:",
-    options: ["A. C<sub>6</sub>H<sub>6</sub>", "B. C<sub>4</sub>H<sub>4</sub> (Vinylacetylene)", "C. C<sub>6</sub>H<sub>5</sub>CH<sub>3</sub>", "D. C<sub>6</sub>H<sub>4</sub>(CH<sub>3</sub>)<sub>2</sub>"],
+    question: "Hóa hơi hoàn toàn 5,85 gam arene X thuộc dãy benzene thu được thể tích hơi bằng thể tích của 1,2 gam khí CH<sub>4</sub> (đo cùng điều kiện). Arene X là:",
+    options: ["A. C<sub>6</sub>H<sub>6</sub>", "B. C<sub>7</sub>H<sub>8</sub>", "C. C<sub>8</sub>H<sub>10</sub>", "D. C<sub>9</sub>H<sub>12</sub>"],
     answer: 0,
-    explanation: "n<sub>CH4</sub> = 1,2 / 16 = 0,075 mol. => n<sub>X</sub> = 0,075 mol. M<sub>X</sub> = 4,6 / 0,075 = 60. (Đề bài có thể sai số, C<sub>6</sub>H<sub>6</sub> là 78). Tính lại: 4,5 / 0,075 = 60. Carbon 12*4 + H=12? Không phải arene. Nếu m=9,2 thì M=92 (Toluene)."
+    explanation: "n<sub>CH<sub>4</sub></sub> = 1,2 / 16 = 0,075 mol. => n<sub>X</sub> = 0,075 mol. M<sub>X</sub> = 5,85 / 0,075 = 78 (g/mol). Vậy X là C<sub>6</sub>H<sub>6</sub>."
   },
   {
     topic: "hydrocarbon",
@@ -1101,10 +1101,10 @@ const REAL_QUESTIONS: Question[] = [
   {
     topic: "hydrocarbon",
     level: "hard",
-    question: "Hỗn hợp X gồm C<sub>3</sub>H<sub>6</sub> và C<sub>3</sub>H<sub>8</sub>. Đốt cháy hoàn toàn X thu được nCO<sub>2</sub> : nH<sub>2</sub>O = 3 : 3,6. Phần trăm số mol của propane trong X là:",
+    question: "Hỗn hợp X gồm C<sub>3</sub>H<sub>6</sub> và C<sub>3</sub>H<sub>8</sub>. Đốt cháy hoàn toàn X thu được n<sub>CO<sub>2</sub></sub> : n<sub>H<sub>2</sub>O</sub> = 3 : 3,6. Phần trăm số mol của propane trong X là:",
     options: ["A. 40%", "B. 60%", "C. 50%", "D. 30%"],
     answer: 1,
-    explanation: "nCO<sub>2</sub> = 3 mol => nC = 3 mol. nH<sub>2</sub>O = 3,6 mol => nH = 7,2 mol. n<sub>X</sub> = nH<sub>2</sub>O - nCO<sub>2</sub> (áp dụng cho hỗn hợp alkane và alkene có cùng số C) = 0,6 mol. n<sub>propane</sub> = 0,6 mol. %n = 0,6/n<sub>X</sub>... Tính lại: Trong 1 mol X (x mol C3H6, y mol C3H8) => x+y=1. nCO2 = 3. nH2O = 3x + 4y = 3,6. => y = 0,6. %n = 60%."
+    explanation: "n<sub>CO<sub>2</sub></sub> = 3 mol => n<sub>C</sub> = 3 mol. n<sub>H<sub>2</sub>O</sub> = 3,6 mol => n<sub>H</sub> = 7,2 mol. n<sub>X</sub> = n<sub>H<sub>2</sub>O</sub> − n<sub>CO<sub>2</sub></sub> (áp dụng cho hỗn hợp alkane và alkene có cùng số C) = 0,6 mol. n<sub>propane</sub> = 0,6 mol. %n<sub>propane</sub> = 60%."
   },
   {
     topic: "hydrocarbon",
@@ -1128,7 +1128,7 @@ const REAL_QUESTIONS: Question[] = [
     question: "Hỗn hợp X gồm methane và một ankin Y (tỉ lệ mol 1:1). Đốt cháy hoàn toàn X thu được CO<sub>2</sub> và H<sub>2</sub>O theo tỉ lệ mol là 1:1. Y là:",
     options: ["A. Acetylene", "B. Propyne", "C. Butyne", "D. Pentyne"],
     answer: 0,
-    explanation: "Giả sử 1 mol CH<sub>4</sub> và 1 mol C<sub>n</sub>H<sub>2n−2</sub>. nCO<sub>2</sub> = 1 + n. nH<sub>2</sub>O = 2 + n − 1 = 1 + n. nCO<sub>2</sub> = nH<sub>2</sub>O => Tỉ lệ 1:1 luôn đúng với mọi ankin? Tính lại: nCO<sub>2</sub> = 1+n. nH<sub>2</sub>O = 2 + (n-1) = n+1. Đúng với mọi n. Nhưng để là hydrocarbon mạch hở thì Y là C<sub>2</sub>H<sub>2</sub> là phổ biến nhất."
+    explanation: "Giả sử 1 mol CH<sub>4</sub> và 1 mol C<sub>n</sub>H<sub>2n−2</sub>. n<sub>CO<sub>2</sub></sub> = 1 + n. n<sub>H<sub>2</sub>O</sub> = 2 + n − 1 = 1 + n. n<sub>CO<sub>2</sub></sub> = n<sub>H<sub>2</sub>O</sub> => Tỉ lệ 1:1 luôn đúng với mọi ankin. Để là hydrocarbon mạch hở đơn giản nhất thì Y là C<sub>2</sub>H<sub>2</sub>."
   },
   {
     topic: "hydrocarbon",
@@ -1152,7 +1152,7 @@ const REAL_QUESTIONS: Question[] = [
     question: "Đốt cháy hoàn toàn một arene X, thu được CO<sub>2</sub> và H<sub>2</sub>O có khối lượng tương ứng là 13,2 gam và 2,7 gam. X phản ứng với Cl<sub>2</sub> (as) tạo duy nhất một dẫn xuất monoclo. Tên của X là:",
     options: ["A. Benzene", "B. Toluene", "C. p−xylene", "D. Hexamethylbenzene"],
     answer: 0,
-    explanation: "nCO<sub>2</sub> = 0,3; nH<sub>2</sub>O = 0,15. Tỉ lệ C:H = 1:1. X là C<sub>6</sub>H<sub>6</sub>. Benzene thế Cl chỉ tạo 1 sản phẩm."
+    explanation: "n<sub>CO<sub>2</sub></sub> = 0,3; n<sub>H<sub>2</sub>O</sub> = 0,15. Tỉ lệ C:H = 1:1. X là C<sub>6</sub>H<sub>6</sub>. Benzene thế Cl chỉ tạo 1 sản phẩm."
   },
   {
     topic: "hydrocarbon",
@@ -1165,10 +1165,10 @@ const REAL_QUESTIONS: Question[] = [
   {
     topic: "hydrocarbon",
     level: "hard",
-    question: "Cho 2,7 gam một alkyne X tác dụng với dung dịch AgNO<sub>3</sub>/NH<sub>3</sub> thu được 11,26 gam kết tủa. X là:",
+    question: "Cho 2,0 gam một alkyne X tác dụng với dung dịch AgNO<sub>3</sub>/NH<sub>3</sub> thu được 7,35 gam kết tủa. X là:",
     options: ["A. Acetylene", "B. Propyne", "C. But−1−yne", "D. Pent−1−yne"],
     answer: 1,
-    explanation: "Giả sử X có 1 liên kết ba đầu mạch (M). M → M + 107. n = (11,26 - 2,7) / 107 = 0,08. M<sub>X</sub> = 2,7 / 0,08 = 33,75. Nếu 2 liên kết ba đầu mạch (acetylene) => n = (11,26 - 2,7) / 214 = 0,04. M<sub>X</sub> = 2,7 / 0,04 = 67,5. Nếu propyne (M=40) => n=0,0675. Tính lại: n=0,0675 * 147 = 9,9. Ở đây 11,26. Có thể là propyne sai số."
+    explanation: "n<sub>Propyne</sub> = 2,0 / 40 = 0,05 mol. Kết tủa là C<sub>3</sub>H<sub>3</sub>Ag (M=147). m<sub>kết tủa</sub> = 0,05 * 147 = 7,35 gam. Hiệu suất 100%."
   },
   {
     topic: "hydrocarbon",
@@ -1208,7 +1208,7 @@ const REAL_QUESTIONS: Question[] = [
     question: "Hỗn hợp X gồm 0,1 mol C<sub>2</sub>H<sub>2</sub> và 0,1 mol H<sub>2</sub>. Dẫn X qua Ni nung nóng thu được hỗn hợp Y. Dẫn Y qua bình nước Br<sub>2</sub> dư thấy khối lượng bình tăng 1,4 gam. Thể tích khí thoát ra khỏi bình Br<sub>2</sub> là:",
     options: ["A. 2,24 lít", "B. 4,48 lít", "C. 1,12 lít", "D. 3,36 lít"],
     answer: 0,
-    explanation: "m bình tăng là m của anken và ankin dư. nX = 0,2 mol. nY = nX − nH2 phản ứng. Khí thoát ra gồm ankan và H2 dư. Theo bảo toàn, V = 2,24 lít."
+    explanation: "m<sub>bình tăng</sub> là khối lượng của alkene và alkyne dư. n<sub>X</sub> = 0,2 mol. n<sub>Y</sub> = n<sub>X</sub> − n<sub>H<sub>2</sub> phản ứng</sub>. Khí thoát ra gồm alkane và H<sub>2</sub> dư. Theo bảo toàn, V = 2,24 lít."
   },
   {
     topic: "hydrocarbon",
@@ -1248,7 +1248,7 @@ const REAL_QUESTIONS: Question[] = [
     question: "Đốt cháy hoàn toàn m gam hỗn hợp X gồm butane và isobutane thu được 33 gam CO<sub>2</sub>. Giá trị m là:",
     options: ["A. 10,875 g", "B. 14,5 g", "C. 11,6 g", "D. 9,8 g"],
     answer: 0,
-    explanation: "nCO<sub>2</sub> = 0,75. n<sub>C4H10</sub> = 0,1875. m = 10,875 g."
+    explanation: "n<sub>CO<sub>2</sub></sub> = 0,75. n<sub>C<sub>4</sub>H<sub>10</sub></sub> = 0,1875. m = 10,875 g."
   },
   {
     topic: "hydrocarbon",
@@ -1272,7 +1272,7 @@ const REAL_QUESTIONS: Question[] = [
     question: "Đốt cháy hoàn toàn một ankin X thu được 6,72 lít CO<sub>2</sub> (đktc) và 3,6 gam H<sub>2</sub>O. X là:",
     options: ["A. C<sub>2</sub>H<sub>2</sub>", "B. C<sub>3</sub>H<sub>4</sub>", "C. C<sub>4</sub>H<sub>6</sub>", "D. C<sub>5</sub>H<sub>8</sub>"],
     answer: 1,
-    explanation: "nCO<sub>2</sub>-nH<sub>2</sub>O = 0,1. C = 3. C<sub>3</sub>H<sub>4</sub>."
+    explanation: "n<sub>CO<sub>2</sub></sub> − n<sub>H<sub>2</sub>O</sub> = 0,1. Số C = 3. X là C<sub>3</sub>H<sub>4</sub>."
   },
   {
     topic: "hydrocarbon",
@@ -1335,8 +1335,8 @@ const REAL_QUESTIONS: Question[] = [
     level: "hard",
     question: "Hỗn hợp C<sub>2</sub>H<sub>2</sub> và H<sub>2</sub> (1:1) qua Ni đun nóng thu được Y có tỉ khối so với H<sub>2</sub> là 10. Hiệu suất cộng H<sub>2</sub> là:",
     options: ["A. 40%", "B. 30%", "C. 50%", "D. 60%"],
-    answer: 1,
-    explanation: "H = 30%."
+    answer: 3,
+    explanation: "Hỗn hợp X có M = 14. Sau phản ứng M tăng lên 20. Tỉ lệ n1/n2 = 20/14 = 10/7. Giả sử ban đầu có 1 mol (0,5 mol C2H2 và 0,5 mol H2). n2 = 0,7 mol. nH2 phản ứng = 1 - 0.7 = 0.3 mol. Hiệu suất H = 0.3 / 0.5 = 60%."
   },
   {
     topic: "hydrocarbon",
@@ -1533,10 +1533,10 @@ const REAL_QUESTIONS: Question[] = [
   {
     topic: "hydrocarbon",
     level: "hard",
-    question: "Một hỗn hợp X gồm propane và propene. Dẫn X qua dung dịch brom thấy khối lượng brom tham gia phản ứng là 16 gam. Khi đốt cháy hoàn toàn X thu được 0,55 mol CO<sub>2</sub>. Số mol propane trong X là:",
+    question: "Một hỗn hợp X gồm propane và propene. Dẫn X qua dung dịch brom thấy khối lượng brom tham gia phản ứng là 16 gam. Khi đốt cháy hoàn toàn X thu được 0,6 mol CO<sub>2</sub>. Số mol propane trong X là:",
     options: ["A. 0,05 mol", "B. 0,1 mol", "C. 0,15 mol", "D. 0,2 mol"],
     answer: 1,
-    explanation: "n<sub>propene</sub> = 0,1 => n<sub>CO<sub>2</sub></sub> (propene) = 0,3. n<sub>CO<sub>2</sub></sub> (propane) = 0,25. Để n<sub>CO<sub>2</sub></sub> tổng = 0,55 thì n<sub>propane</sub> = 0,25 / 3 = 0,083 mol. Chọn phương án gần đúng nhất hoặc điều chỉnh số liệu đề bài."
+    explanation: "n<sub>propene</sub> = n<sub>Br<sub>2</sub></sub> = 16 / 160 = 0,1 mol. n<sub>CO<sub>2</sub> do propene</sub> = 0,1 * 3 = 0,3 mol. n<sub>CO<sub>2</sub> do propane</sub> = 0,6 − 0,3 = 0,3 mol. => n<sub>propane</sub> = 0,3 / 3 = 0,1 mol."
   },
   {
     topic: "hydrocarbon",
